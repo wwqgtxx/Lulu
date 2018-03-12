@@ -6,6 +6,7 @@ from .archive import *
 from .baidu import *
 from .bandcamp import *
 from .baomihua import *
+from .bcy import *
 from .bigthink import *
 from .bilibili import *
 from .bokecc import *
@@ -55,6 +56,7 @@ from .netease import *
 from .nicovideo import *
 from .panda import *
 from .pinterest import *
+from .pixivision import *
 from .pixnet import *
 from .pptv import *
 from .qie import *

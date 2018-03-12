@@ -193,9 +193,6 @@ class TestExtractors(unittest.TestCase):
     @ignore_network_issue
     def test_acfun(self):
         extractors.acfun.download(
-            'http://www.acfun.cn/v/ac4209715', info_only=True
-        )
-        extractors.acfun.download(
             'http://www.acfun.cn/v/ac4210425', info_only=True
         )
 
@@ -680,6 +677,7 @@ class TestExtractors(unittest.TestCase):
             info_only=True
         )
 
+    @skipOnCI
     def test_pixnet(self):
         extractors.pixnet.download(
             'http://eric6513.pixnet.net/album/video/206644535',
@@ -761,7 +759,7 @@ class TestExtractors(unittest.TestCase):
             info_only=True
         )
 
-    @ignore_network_issue
+    @skipOnCI
     def test_ximalaya(self):
         extractors.ximalaya.download(
             'http://www.ximalaya.com/24137038/sound/71717551/',
@@ -773,6 +771,13 @@ class TestExtractors(unittest.TestCase):
         )
 
     @ignore_network_issue
+    def test_pixivision(self):
+        extractors.pixivision.download(
+            'https://www.pixivision.net/zh/a/3244',
+            info_only=True
+        )
+
+    @ignore_network_issue
     def test_longzhu(self):
         extractors.longzhu.download(
             'http://v.longzhu.com/xiayike233/v/762954',
@@ -780,6 +785,17 @@ class TestExtractors(unittest.TestCase):
         )
         extractors.longzhu.download(
             'http://replay.longzhu.com/v/5669968',
+            info_only=True
+        )
+
+    @ignore_network_issue
+    def test_bcy(self):
+        extractors.bcy.download(
+            'https://bcy.net/coser/detail/67736/2009414',
+            info_only=True
+        )
+        extractors.bcy.download(
+            'https://bcy.net/illust/detail/15294/2077317',
             info_only=True
         )
 
