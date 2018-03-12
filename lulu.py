@@ -7,6 +7,7 @@ _srcdir = '%s/' % os.path.dirname(os.path.realpath(__file__))
 _filepath = os.path.dirname(sys.argv[0])
 sys.path.insert(1, os.path.join(_filepath, _srcdir))
 sys.path.insert(1, os.path.join(_filepath, '../lib/lulu_lib/'))
+sys.path.insert(1, os.path.join(_filepath, '../lib/requests_lib/'))
 
 
 if sys.version_info[0] == 3:
